@@ -38,13 +38,13 @@ internal class Program
         ILogger emailLogger = new ConsoleLogger();
         NotificationService notificationService1 = new NotificationService(emailService, emailLogger);
         notificationService1.SendEmail("Anders", "Læreplads", 
-            "Hej Anders, jeg ønsker er høre om i kunne være interesseret i en ny elev");
+            "Hej Anders, jeg ønsker at høre om i kunne være interesseret i en ny elev");
 
         IEmailSender smtpEmailService = new SmtpEmailSender();
         ILogger smtpEmailLogger = new FileLogger("EmailLog.txt");
         NotificationService notificationService2 = new NotificationService(smtpEmailService, smtpEmailLogger);
-        notificationService2.SendEmail("Anders", "Læreplads",
-            "Hej Anders, jeg ønsker er høre om i kunne være interesseret i en ny elev");
+        notificationService2.SendEmail("Torben", "Læreplads",
+            "Hej Torben, jeg ønsker at høre om i kunne være interesseret i en ny elev");
 
         /* --------------------------------------------------------------------------------------------- */
 
